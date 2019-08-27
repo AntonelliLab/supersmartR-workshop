@@ -1,0 +1,77 @@
+---
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+# `outsider` Introduction
+
+`outsider` is a package that allows users to install and run external code
+within the R environment. This is very useful when trying to construct
+pipelines that make use of a variety of code. `outsider` requires Docker to
+work.
+
+![](https://raw.githubusercontent.com/AntonelliLab/outsider/master/other/outline.png)
+
+
+## Running alignment software
+
+To demonstrate, let's run an alignment software tool,
+[mafft](https://mafft.cbrc.jp/alignment/software/), from within R. Let's
+install an module for mafft, and then run it on some test sequences.
+
+### Install
+
+```{r remove-mafft, include=FALSE}
+if (outsider::is_module_installed('dombennett/om..mafft')) {
+  outsider::module_uninstall('dombennett/om..mafft')
+}
+```
+```{r mafft, echo=TRUE}
+library(outsider)
+# github repo to where the module is located
+repo <- 'dombennett/om..mafft'
+# install mafft
+module_install(repo)
+# look up available functions
+(module_functions(repo = repo))
+# import mafft function
+mafft <- module_import(fname = 'mafft', repo = repo)
+# test function
+mafft(arglist = '--help')
+```
+
+### Align
+
+TODO: get a smaller example file
+```{r align, echo=TRUE}
+library(outsider)
+# Download example nucleotide data
+ex_seqs_file <- file.path(tempdir(), "ex_seqs.fasta")
+#download.file(url = "https://mafft.cbrc.jp/alignment/software/ex1.txt",
+#              destfile = ex_seqs_file)
+# Run
+mafft <- module_import(fname = 'mafft', repo = 'dombennett/om..mafft')
+ex_al_file <- file.path(tempdir(), "ex_al.fasta")
+#mafft(arglist = c('--auto', ex_seqs_file, '>', ex_al_file))
+
+# View alignment
+```
+
+## Find out more
+
+Learn more about `outsider` by visiting the
+[website](https://antonellilab.github.io/outsider/).
+
+* * *
+
+# Challenge
+
+* Install mafft via outsider
+* 
