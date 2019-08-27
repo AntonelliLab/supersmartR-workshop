@@ -20,6 +20,7 @@ and scaling up the method.
 * Run simple phylogenetic pipeline
 * Develop own more complex pipeline
 * Develop R programming skills
+* Become aware of the different phylogenetic and computing options
 
 * * *
 
@@ -48,15 +49,15 @@ Install dependant packages.
 
 library(remotes)
 # install latest phylotaR
-install_github(“ropensci/phylotaR”)
+install_github("ropensci/phylotaR")
 # install latest restez
 install_github("hannesmuehleisen/MonetDBLite-R")
-install_github(“ropensci/restez”)
+install_github("ropensci/restez")
 # install latest outsider
-install_github(“antonellilab/outsider.base”)
-install_github(“antonellilab/outsider”)
+install_github("antonellilab/outsider.base")
+install_github("antonellilab/outsider")
 # install latest gaius
-install_github(“antonellilab/gaius”)
+install_github("antonellilab/gaius")
 ```
 
 If you're computer is set-up correctly with the R packages and Docker, you
