@@ -10,18 +10,7 @@ In this workshop we will introduce you to the packages, outline the steps of
 a simple phylogenetic pipeline and demonstrate the next steps for advancing
 and scaling up the method.
 
-## Learning outcomes
-
-* Gain experience in the four existing `supersmartR` packages:
-[phylotaR](https://github.com/ropensci/phylotaR),
-[restez](https://github.com/ropensci/restez),
-[outsider](https://github.com/antonellilab/outsider),
-[gaius](https://github.com/antonellilab/gaius).
-* Run simple phylogenetic pipeline
-* Develop own more complex pipeline
-* Develop R programming skills
-
-## Prerequisites
+# Prerequisites
 
 * Computer
     * Operating system: Windows 10, Linux, OSX
@@ -36,9 +25,23 @@ and scaling up the method.
 
 (If you have a Windows computer, consider setting up [dual-boot](https://help.ubuntu.com/community/WindowsDualBoot#Install_Ubuntu_after_Windows).)
 
-## Slides
+# Learning outcomes
+
+* Gain experience in the four existing `supersmartR` packages:
+[phylotaR](https://github.com/ropensci/phylotaR),
+[restez](https://github.com/ropensci/restez),
+[outsider](https://github.com/antonellilab/outsider),
+[gaius](https://github.com/antonellilab/gaius).
+* Run simple phylogenetic pipeline
+* Develop own more complex pipeline
+* Develop R programming skills
+
+
+# Slides
 
 **Not yet available!**
+
+# Details
 
 ## Workshop teachers
 
