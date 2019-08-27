@@ -1,0 +1,114 @@
+---
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+# `restez` Introduction
+
+`restez` is a package that allows users to download whole chunks of NCBI's
+[GenBank](https://www.ncbi.nlm.nih.gov/genbank/). The package works by:
+
+* Downloading compressed files of sections of GenBank
+* Unpacking these files and building a local GenBank copy
+* Providing generic functions for interacting with the local copy
+
+![](https://raw.githubusercontent.com/ropensci/restez/master/paper/outline.png)
+
+## Installation
+
+Currently unavailable from CRAN. Install via GitHub.
+
+```{r install, eval=FALSE, include=TRUE}
+# install key dependency
+remotes::install_github("hannesmuehleisen/MonetDBLite-R")
+# install restez
+remotes::install_github("ropensci/restez")
+```
+
+
+## Set-up your first `restez` database
+
+Here, we will do the following:
+
+1. Specify a location for our database (`restez_path`)
+2. Download the smallest section of GenBank (unannotated)
+3. Build a local database
+
+```{r delete-database, include=FALSE}
+rstz_pth <- file.path(tempdir(), 'unannotated_database')
+if (dir.exists(rstz_pth)) {
+  unlink(x = rstz_pth, recursive = TRUE, force = TRUE)
+}
+```
+```{r restez-setup, echo=TRUE}
+library(restez)
+
+# 1. Set the filepath for where the database will be stored
+rstz_pth <- file.path(tempdir(), 'unannotated_database')
+if (!dir.exists(rstz_pth)) {
+  dir.create(rstz_pth)
+}
+restez_path_set(filepath = rstz_pth)
+
+# 2. Download
+# select number 20, for unannoated (the smallest section)
+db_download(preselection = '20')
+
+# 3. Create database
+# connect to empty database
+restez_connect()
+db_create()
+# always disconnect from a database when not in use.
+restez_disconnect()
+```
+
+## Query the database
+
+We can send queries to the database using two different methods: `restez`
+functions or [`rentrez`](https://ropensci.org/tutorials/rentrez_tutorial/)
+wrappers.
+
+> **What is `rentrez`?** The `rentrez` package allows users to interact with
+NCBI Entrez. `restez` wraps around some of its functions so that instead of
+sending queries across the internet, the local database is checked first.
+
+```{r querying, echo=TRUE}
+# import library, point to database and connect
+library(restez)
+rstz_pth <- file.path(tempdir(), 'unannotated_database')
+restez_path_set(filepath = rstz_pth)
+restez_connect()
+
+# Check the status
+restez_status()
+
+# Get a random ID from the database
+id <- sample(x = list_db_ids(n = 100), size = 1)
+# print record information
+record <- gb_record_get(id)
+cat(record)
+# see ?gb_record_get for more query functions
+
+# always disconnect
+restez_disconnect()
+```
+
+## Find out more
+
+For more information, visit the [`restez` website](https://ropensci.github.io/restez/).
+
+* * *
+
+# Challenge
+
+* Build a database of all phage sequences
+* Write out all "Escherichia" sequences to a fasta file
+
+(It may take a few minutes for the phage database to build.)
