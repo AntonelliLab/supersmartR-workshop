@@ -10,6 +10,17 @@ In this workshop we will introduce you to the packages, outline the steps of
 a simple phylogenetic pipeline and demonstrate the next steps for advancing
 and scaling up the method.
 
+### Learning outcomes
+
+* Gain experience in the four existing `supersmartR` packages:
+[phylotaR](https://github.com/ropensci/phylotaR),
+[restez](https://github.com/ropensci/restez),
+[outsider](https://github.com/antonellilab/outsider),
+[gaius](https://github.com/antonellilab/gaius).
+* Run simple phylogenetic pipeline
+* Develop own more complex pipeline
+* Develop R programming skills
+
 * * *
 
 # Prerequisites
@@ -58,19 +69,6 @@ module_install(repo = repo, force = TRUE)
 hello_world <- module_import(fname = "hello_world", repo = repo)
 hello_world()
 ```
-
-* * *
-
-# Learning outcomes
-
-* Gain experience in the four existing `supersmartR` packages:
-[phylotaR](https://github.com/ropensci/phylotaR),
-[restez](https://github.com/ropensci/restez),
-[outsider](https://github.com/antonellilab/outsider),
-[gaius](https://github.com/antonellilab/gaius).
-* Run simple phylogenetic pipeline
-* Develop own more complex pipeline
-* Develop R programming skills
 
 * * *
 
