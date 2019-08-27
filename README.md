@@ -43,23 +43,23 @@ and scaling up the method.
 
 # Details
 
-## Workshop teachers
+### Workshop teachers
 
 [Dom Bennett](https://github.com/dombennett),
 [Tobi Andermann](https://github.com/tobiashofmann88),
 [Matthias Obst](https://github.com/biomobst)
 
-## Workshop sponsors
+### Workshop sponsors
 
-### [Gothenburg Global Biodiversity Centre](https://ggbc.gu.se/)
+#### [Gothenburg Global Biodiversity Centre](https://ggbc.gu.se/)
 
 <img src="https://ggbc.gu.se/digitalAssets/1623/1623292_illustration-ggbc-webb.jpg" height="250"/>
 
-### [Nordic E-Infrastructure Collaboration](https://neic.no/)
+#### [Nordic E-Infrastructure Collaboration](https://neic.no/)
 
 <img src="https://www.nordforsk.org/en/programmes-and-projects/programmes/the-nordic-e-infrastructure-collaboration/header-image_header" width="300"/>
 
-### [Swedish Life Watch](https://www.slu.se/en/subweb/swedish-lifewatch/)
+#### [Swedish Life Watch](https://www.slu.se/en/subweb/swedish-lifewatch/)
 
 <!--<img src="https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjKve-h4qLkAhUMElAKHRxvAkgQjRx6BAgBEAQ&url=https%3A%2F%2Fgithub.com%2FSwedishLifeWatch&psig=AOvVaw0eRJ86ig9BRubAlxMDvDN-&ust=1566985563226651" />-->
 
