@@ -10,6 +10,8 @@ In this workshop we will introduce you to the packages, outline the steps of
 a simple phylogenetic pipeline and demonstrate the next steps for advancing
 and scaling up the method.
 
+* * *
+
 # Prerequisites
 
 * Computer
@@ -25,6 +27,40 @@ and scaling up the method.
 
 (If you have a Windows computer, consider setting up [dual-boot](https://help.ubuntu.com/community/WindowsDualBoot#Install_Ubuntu_after_Windows).)
 
+### R packages
+
+Install dependant packages.
+
+```r
+# remotes allows installation via GitHub
+# install.packages(“remotes”)
+
+library(remotes)
+# install latest phylotaR
+install_github(“ropensci/phylotaR”)
+# install latest restez
+install_github("hannesmuehleisen/MonetDBLite-R")
+install_github(“ropensci/restez”)
+# install latest outsider
+install_github(“antonellilab/outsider.base”)
+install_github(“antonellilab/outsider”)
+# install latest gaius
+install_github(“antonellilab/gaius”)
+```
+
+If you're computer is set-up correctly with the R packages and Docker, you
+should be able to run the below script without errors.
+
+```r
+library(outsider)
+repo <- "dombennett/om..hello.world"
+module_install(repo = repo, force = TRUE)
+hello_world <- module_import(fname = "hello_world", repo = repo)
+hello_world()
+```
+
+* * *
+
 # Learning outcomes
 
 * Gain experience in the four existing `supersmartR` packages:
@@ -36,10 +72,13 @@ and scaling up the method.
 * Develop own more complex pipeline
 * Develop R programming skills
 
+* * *
 
 # Slides
 
 **Not yet available!**
+
+* * *
 
 # Details
 
