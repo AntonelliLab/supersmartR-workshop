@@ -1,13 +1,25 @@
 # Simple phylogenetic pipeline
 
+This pipeline consists of a series of R scipts for constructing a phylogenetic
+tree for a single gene/cluster. The order in which the scripts are run is
+indicated by the preffixed number.
+
 ## Steps
 
-1. Choose a taxonomic ID
-2. Edit `1_phylotaR.R` for new id
-3. Edit `2_cluster.R` to select a single cluster
-4. Run each script in sequence
+1. Choose a taxonomic ID.
+2. Edit the first script, `1_phylotaR.R` for your taxonomic ID of interest.
+3. Run the first script.
+4. Edit the second script, `2_cluster.R` to identify your cluster of choice
+5. Run the second script.
+6. Edit `3_align.R` for your clade/gene pair.
+7. Run the third script.
+8. Edit `4_phylogeny.R` for your clade/gene pair.
+9. Run the fourth script.
+10. Run `5_view.R` to visualise the tree.
 
-#### Choosing an taxonomic ID
+(`run_script.R` launches all the scripts in order.)
+
+#### Choosing a taxonomic ID
 
 Taxonomic IDs are based on those from NCBI. To select a taxonomic ID, you will
 need to look up the 
