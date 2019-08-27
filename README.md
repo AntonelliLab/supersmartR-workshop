@@ -1,10 +1,10 @@
-# supersmartR Workshop <img src="logo.png" height="300" align="right"/>
+# supersmartR Workshop <img src="https://raw.githubusercontent.com/AntonelliLab/supersmartR/master/logo.png" height="300" align="right"/>
 > 17 Sept. 2019, Gothenburg Global Biodiversity Centre, Gothenburg, Sweden.
 
 [`supersmartR`](https://github.com/AntonelliLab/supersmartR) is a series of
 R packages that form a phylogenetic pipeline.
 
-## <img src="supersmart%20vs%20supersmartr.png" height="450" align="middle"/>
+## <img src="https://raw.githubusercontent.com/AntonelliLab/supersmartR/master/supersmart%20vs%20supersmartr.png" height="450" align="middle"/>
 
 In this workshop we will introduce you to the packages, outline the steps of
 a simple phylogenetic pipeline and demonstrate the next steps for advancing
@@ -50,13 +50,13 @@ and scaling up the method.
 
 ### [Gothenburg Global Biodiversity Centre](https://ggbc.gu.se/)
 
-![](https://ggbc.gu.se/digitalAssets/1623/1623292_illustration-ggbc-webb.jpg)
+<img src="https://ggbc.gu.se/digitalAssets/1623/1623292_illustration-ggbc-webb.jpg" height="250"/>
 
 ### [Nordic E-Infrastructure Collaboration](https://neic.no/)
 
-![](https://neic.no/assets/images/logo.png)
+<img src="https://www.nordforsk.org/en/programmes-and-projects/programmes/the-nordic-e-infrastructure-collaboration/header-image_header" width="300"/>
 
 ### [Swedish Life Watch](https://www.slu.se/en/subweb/swedish-lifewatch/)
 
-![](https://www.slu.se/globalassets/ew/subw/lifewatch/bilder/logos-och-symboler/logo-element-slw.png?width=39&height=39&mode=crop)
+<!--<img src="https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjKve-h4qLkAhUMElAKHRxvAkgQjRx6BAgBEAQ&url=https%3A%2F%2Fgithub.com%2FSwedishLifeWatch&psig=AOvVaw0eRJ86ig9BRubAlxMDvDN-&ust=1566985563226651" />-->
 
