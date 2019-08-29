@@ -89,14 +89,8 @@ hello_world()
 
 ### Workshop sponsors
 
-[Gothenburg Global Biodiversity Centre](https://ggbc.gu.se/)
+[Gothenburg Global Biodiversity Centre](https://ggbc.gu.se/) <img src="https://ggbc.gu.se/digitalAssets/1623/1623292_illustration-ggbc-webb.jpg" height="150" align="middle"/>
 
-<img src="https://ggbc.gu.se/digitalAssets/1623/1623292_illustration-ggbc-webb.jpg" height="150"/>
+[Nordic E-Infrastructure Collaboration](https://neic.no/) <img src="https://www.nordforsk.org/en/programmes-and-projects/programmes/the-nordic-e-infrastructure-collaboration/header-image_header" width="250" align="middle"/>
 
-[Nordic E-Infrastructure Collaboration](https://neic.no/)
-
-<img src="https://www.nordforsk.org/en/programmes-and-projects/programmes/the-nordic-e-infrastructure-collaboration/header-image_header" width="250"/>
-
-[Swedish Life Watch](https://www.slu.se/en/subweb/swedish-lifewatch/)
-
-<img src="assets/swedish_life_watch_logo.png" height="150"/>
+[Swedish Life Watch](https://www.slu.se/en/subweb/swedish-lifewatch/) <img src="assets/swedish_life_watch_logo.png" height="150" align="middle"/>
