@@ -83,14 +83,20 @@ hello_world()
 
 ### Workshop teachers
 
-[Dom Bennett](https://github.com/dombennett),
-[Tobi Andermann](https://github.com/tobiashofmann88),
-[Matthias Obst](https://github.com/biomobst)
+* [Dom Bennett](https://github.com/dombennett)
+* [Tobi Andermann](https://github.com/tobiashofmann88)
+* [Matthias Obst](https://github.com/biomobst)
 
 ### Workshop sponsors
 
-<img src="https://ggbc.gu.se/digitalAssets/1623/1623292_illustration-ggbc-webb.jpg" height="150" align="left"/> [Gothenburg Global Biodiversity Centre](https://ggbc.gu.se/)
+[Gothenburg Global Biodiversity Centre](https://ggbc.gu.se/)
 
-<img src="https://www.nordforsk.org/en/programmes-and-projects/programmes/the-nordic-e-infrastructure-collaboration/header-image_header" width="250" align="left"/> [Nordic E-Infrastructure Collaboration](https://neic.no/)
+<img src="https://ggbc.gu.se/digitalAssets/1623/1623292_illustration-ggbc-webb.jpg" height="150" align="left"/>
 
-<img src="assets/swedish_life_watch_logo.png" height="150" align="left"/> [Swedish Life Watch](https://www.slu.se/en/subweb/swedish-lifewatch/)
+[Nordic E-Infrastructure Collaboration](https://neic.no/)
+
+<img src="https://www.nordforsk.org/en/programmes-and-projects/programmes/the-nordic-e-infrastructure-collaboration/header-image_header" width="250" align="left"/>
+
+[Swedish Life Watch](https://www.slu.se/en/subweb/swedish-lifewatch/)
+
+<img src="assets/swedish_life_watch_logo.png" height="150" align="left"/>
