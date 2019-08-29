@@ -99,5 +99,4 @@ hello_world()
 
 #### [Swedish Life Watch](https://www.slu.se/en/subweb/swedish-lifewatch/)
 
-<!--<img src="https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjKve-h4qLkAhUMElAKHRxvAkgQjRx6BAgBEAQ&url=https%3A%2F%2Fgithub.com%2FSwedishLifeWatch&psig=AOvVaw0eRJ86ig9BRubAlxMDvDN-&ust=1566985563226651" />-->
-
+<img src="assets/swedish_life_watch_logo.png" />
