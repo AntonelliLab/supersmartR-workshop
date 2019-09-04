@@ -49,19 +49,19 @@ mafft(arglist = '--help')
 
 ### Align
 
-TODO: get a smaller example file
 ```{r align, echo=TRUE}
 library(outsider)
-# Download example nucleotide data
-ex_seqs_file <- file.path(tempdir(), "ex_seqs.fasta")
-#download.file(url = "https://mafft.cbrc.jp/alignment/software/ex1.txt",
-#              destfile = ex_seqs_file)
+# Use example mafft nucleotide data
+ex_seqs_file <- file.path(getwd(), 'ex_seqs.fasta')
+(file.exists(ex_seqs_file))
 # Run
 mafft <- module_import(fname = 'mafft', repo = 'dombennett/om..mafft')
-ex_al_file <- file.path(tempdir(), "ex_al.fasta")
-#mafft(arglist = c('--auto', ex_seqs_file, '>', ex_al_file))
+ex_al_file <- file.path(getwd(), "ex_al.fasta")
+mafft(arglist = c('--auto', ex_seqs_file, '>', ex_al_file))
+(file.exists(ex_al_file))
 
 # View alignment
+cat(readLines(con = ex_al_file, n = 50), sep = '\n')
 ```
 
 ## Find out more
@@ -71,7 +71,7 @@ Learn more about `outsider` by visiting the
 
 * * *
 
-# Challenge
+# Exercise
 
 * Install mafft via outsider
-* 
+* Align the sequences written to file from the `phylotaR` challenge.

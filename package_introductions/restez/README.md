@@ -127,7 +127,7 @@ restez_connect()
 #> Remember to run `restez_disconnect()`
 db_create()
 #> Adding 1 file(s) to the database ...
-#> ... [32m'gbuna1.seq.gz'[39m ([34m1/1[39m)
+#> ... [32m'gbuna1.seq.gz'[39m ([34m1/1[39m)
 #> Done.
 # always disconnect from a database when not in use.
 restez_disconnect()
@@ -237,7 +237,7 @@ For more information, visit the [`restez` website](https://ropensci.github.io/re
 
 ------------------------------------------------------------------------
 
-Challenge
+Exercise
 =========
 
 -   Build a database of all phage sequences

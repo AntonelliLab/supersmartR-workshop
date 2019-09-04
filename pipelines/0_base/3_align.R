@@ -22,7 +22,6 @@ mafft <- module_import(fname = 'mafft', repo = repo)
 # Align ----
 # mafft(arglist = '--help')
 input_file <- file.path(getwd(), input_dir, paste0(clade_gene, '.fasta'))
-# TODO: 1. fix warning, 2. why can't output file have same filename?
 output_file <- file.path(getwd(), output_dir,
                          paste0(clade_gene, '_alignment.fasta'))
 mafft(arglist = c('--auto', input_file, '>', output_file))
