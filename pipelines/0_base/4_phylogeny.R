@@ -7,8 +7,9 @@ library(outsider)
 # Vars ----
 clade_gene <- 'aotus_cytb'
 repo <- 'dombennett/om..raxml'
-input_dir <- file.path('simple_pipeline', '3_align')
-output_dir <- file.path('simple_pipeline', '4_phylogeny')
+wd <- file.path(getwd(), 'pipelines', '0_base')
+input_dir <- file.path(wd, '3_align')
+output_dir <- file.path(wd, '4_phylogeny')
 if (!dir.exists(output_dir)) {
   dir.create(output_dir)
 }
@@ -21,16 +22,8 @@ raxml <- module_import(fname = 'raxml', repo = repo)
 
 # Phylogeny ----
 # raxml('-h')
-input_file <- file.path(getwd(), input_dir,
-                        paste0(clade_gene, '_alignment.fasta'))
+input_file <- file.path(input_dir, paste0(clade_gene, '_alignment.fasta'))
 # fast analysis
 seed_n <- round(runif(n = 1, min = 1, max = 99999))
-# TODO: create arglist
-raxml('-m', 'GTRGAMMA', '-s', input_file, '-p', seed_n, '-n', clade_gene, '-T',
-      '2')
-# secondary movement of files to output_dir
-fls <- list.files(pattern = clade_gene)
-for (fl in fls) {
-  file.copy(from = fl, to = file.path(output_dir, fl))
-  file.remove(fl)
-}
+raxml(arglist = c('-m', 'GTRGAMMA', '-s', input_file, '-p', seed_n, '-n',
+                  clade_gene, '-T', '2'), outdir = output_dir)

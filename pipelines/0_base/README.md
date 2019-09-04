@@ -17,7 +17,7 @@ indicated by the preffixed number.
 9. Run the fourth script.
 10. Run `5_view.R` to visualise the tree.
 
-(`run_script.R` launches all the scripts in order.)
+(`../run_script.R` launches all the scripts in order.)
 
 #### Choosing a taxonomic ID
 

@@ -6,7 +6,9 @@
 library(phylotaR)
 
 # Vars ----
-wd <- file.path('simple_pipeline', '1_phylotaR')
+# assuming getwd() returns the directory to where `supersmartR-workshop/` exists
+wd <- file.path(getwd(), 'pipelines', '0_base')
+wd <- file.path(wd, '1_phylotaR')
 if (dir.exists(wd)) {
   unlink(x = wd, recursive = TRUE, force = TRUE)
 }

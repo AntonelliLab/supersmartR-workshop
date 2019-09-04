@@ -1,8 +1,18 @@
+# Var ----
+# choose the pipeline to run
+pipeline_dir <- file.path(getwd(), 'pipelines', '0_base')
+
 # Run the entire pipeline
+if (!dir.exists(pipeline_dir)) {
+  stop('Invalid directory')
+}
 start_time <- Sys.time()
-pipeline_dir <- 'simple_pipeline'
+# identify stage scripts by naming convention: #_name.R
 stage_scripts <- list.files(path = pipeline_dir, pattern = '\\.R')
-stage_scripts <- stage_scripts[stage_scripts != 'run_script.R']
+stage_scripts <- stage_scripts[grepl(pattern = '^[0-9]+[a-zA-Z0-9_]+\\.R$',
+                                     x = stage_scripts)]
+stage_scripts <- sort(stage_scripts)
+stage_scripts <- stage_scripts[-1]
 cat(cli::rule())
 cat('Running ', crayon::green(pipeline_dir), ' ....\n', sep = '')
 cat(cli::rule())
@@ -14,5 +24,5 @@ for (stage_script in stage_scripts) {
 }
 end_time <- Sys.time()
 duration <- difftime(end_time, start_time, units = 'mins')
-cat('Duration: ', crayon::red(duration), ' minutes.\n')
+cat('Duration: ', crayon::red(round(x = duration, digits = 3)), ' minutes.\n')
 cat(cli::rule())

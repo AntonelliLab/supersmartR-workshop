@@ -5,8 +5,8 @@
 library(ape)
 
 # Vars ----
-input_file <- file.path('simple_pipeline', '4_phylogeny',
-                        'RAxML_bestTree.aotus_cytb')
+wd <- file.path(getwd(), 'pipelines', '0_base')
+input_file <- file.path(wd, '4_phylogeny', 'RAxML_bestTree.aotus_cytb')
 
 # Read in ----
 tree <- read.tree(file = input_file)

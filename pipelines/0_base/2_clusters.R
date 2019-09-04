@@ -5,8 +5,9 @@
 library(phylotaR)
 
 # Vars ----
-input_dir <- file.path('simple_pipeline', '1_phylotaR')
-output_dir <- file.path('simple_pipeline', '2_clusters')
+wd <- file.path(getwd(), 'pipelines', '0_base')
+input_dir <- file.path(wd, '1_phylotaR')
+output_dir <- file.path(wd, '2_clusters')
 if (!dir.exists(output_dir)) {
   dir.create(output_dir)
 }
