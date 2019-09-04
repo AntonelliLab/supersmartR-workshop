@@ -75,7 +75,10 @@ hello_world()
 
 # Slides
 
-**Not yet available!**
+> Note: work in progress.
+
+<embed src="https://drive.google.com/viewerng/
+viewer?embedded=true&url=https://github.com/AntonelliLab/supersmartR-workshop/raw/master/assets/slides.pdf" width="750" height="800">
 
 * * *
 
