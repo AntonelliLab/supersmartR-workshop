@@ -13,10 +13,7 @@ if (!dir.exists(output_dir)) {
 }
 
 # Read in ----
-# TODO fix
-# clusters <- read_phylota(input_dir)
-data(aotus)
-clusters <- aotus
+clusters <- read_phylota(input_dir)
 
 # Extract cytb ----
 # Generate summary of identified clusters
