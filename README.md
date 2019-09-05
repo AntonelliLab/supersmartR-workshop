@@ -10,6 +10,10 @@ In this workshop we will introduce you to the packages, outline the steps of
 a simple phylogenetic pipeline and demonstrate the next steps for advancing
 and scaling up the method.
 
+#### Base pipeline
+
+![](/assets/base_pipeline.gif)
+
 ### Learning outcomes
 
 * Gain experience in the four existing `supersmartR` packages:

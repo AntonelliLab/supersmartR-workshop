@@ -10,4 +10,4 @@ input_file <- file.path(wd, '4_phylogeny', 'RAxML_bestTree.aotus_cytb')
 
 # Read in ----
 tree <- read.tree(file = input_file)
-plot(tree)
+plot(tree, no.margin = TRUE)

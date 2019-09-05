@@ -12,7 +12,6 @@ stage_scripts <- list.files(path = pipeline_dir, pattern = '\\.R')
 stage_scripts <- stage_scripts[grepl(pattern = '^[0-9]+[a-zA-Z0-9_]+\\.R$',
                                      x = stage_scripts)]
 stage_scripts <- sort(stage_scripts)
-stage_scripts <- stage_scripts[-1]
 cat(cli::rule())
 cat('Running ', crayon::green(pipeline_dir), ' ....\n', sep = '')
 cat(cli::rule())
@@ -20,7 +19,7 @@ for (stage_script in stage_scripts) {
   cat('.... ', crayon::green(stage_script), '\n', sep = '')
   stage_env <- new.env()
   source(file = file.path(pipeline_dir, stage_script), echo = FALSE,
-         local = stage_env)
+         local = stage_env, print.eval = FALSE)
 }
 end_time <- Sys.time()
 duration <- difftime(end_time, start_time, units = 'mins')
