@@ -14,8 +14,8 @@ module_install(repo = repo)
 mafft <- module_import('mafft', repo)
 
 # Align ----
-seqs_file <- file.path(getwd(), 'package_introductions', 'phylotaR',
-                       'seqs.fasta')
-al_file <- file.path(getwd(), 'package_introductions', 'phylotaR',
-                     'al.fasta')
+seqs_file <- file.path(getwd(), 'package_introductions', '3_outsider',
+                       'ex_seqs.fasta')
+al_file <- file.path(getwd(), 'package_introductions', '3_outsider',
+                     'ex_al.fasta')
 mafft(arglist = c('--auto', seqs_file, '>', al_file))

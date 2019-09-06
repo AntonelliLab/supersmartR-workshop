@@ -4,3 +4,4 @@
 .Ruserdata
 *.Rproj
 ex_al.fasta
+private_host_info.RData
