@@ -19,8 +19,7 @@ if (!is_module_installed(repo = repo)) {
 mafft <- module_import(fname = 'mafft', repo = repo)
 seqs_file <- file.path(getwd(), 'package_introductions', '3_outsider',
                        'ex_seqs.fasta')
-al_file <- file.path(getwd(), 'package_introductions', '3_outsider',
-                     'ex_al.fasta')
+al_file <- file.path(getwd(), 'advanced_topics', 'ex_al.fasta')
 # mafft will run on host computer
 mafft(arglist = c('--auto', seqs_file, '>', al_file))
 
