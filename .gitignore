@@ -5,3 +5,5 @@
 *.Rproj
 ex_al.fasta
 private_host_info.RData
+advanced_topics/ex_seqs.fasta
+
