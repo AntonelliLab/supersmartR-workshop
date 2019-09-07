@@ -1,6 +1,6 @@
 # Var ----
 # choose the pipeline to run
-pipeline_dir <- file.path(getwd(), 'pipelines', '0_base')
+pipeline_dir <- file.path(getwd(), 'pipelines', '2_large')
 
 # Run the entire pipeline
 if (!dir.exists(pipeline_dir)) {

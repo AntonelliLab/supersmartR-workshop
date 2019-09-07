@@ -34,6 +34,9 @@ for (i in seq_len(nrow(smmry))) {
   scientific_names <- gsub('\\s+', '_', scientific_names)
   sids <- reduced@clstrs[[cid]]@sids
   gene_nm <- sub(pattern = '\\s.*$', replacement = '', smmry[i, 'Feature'])
+  if (nchar(gene_nm) <= 3) {
+    gene_nm <- paste0(i, '_cluster')
+  }
   write_sqs(phylota = reduced, sid = sids, sq_nm = scientific_names,
             outfile = file.path(output_dir, paste0(gene_nm, '.fasta')))
 }
