@@ -91,11 +91,11 @@ only be available on the day of the workshop.
 
 |GenBank section     |Size (Gb)|Link                  |
 |--------------------|---------|----------------------|
-|Invertebrates       |1.6      |[Download](invert_url)|
-|Other mammals       |0.1      |[Download](om_url)    |
-|Other vertebrates   |0.5      |[Download](ov_url)    |
-|Plants, fungi, algae|1.2      |[Download](pga_url)   |
-|Primates            |0.3      |[Download](pri_url)   |
+|Invertebrates       |1.6      |[Download][invert_url]|
+|Other mammals       |0.1      |[Download][om_url]    |
+|Other vertebrates   |0.5      |[Download][ov_url]    |
+|Plants, fungi, algae|1.2      |[Download][pga_url]   |
+|Primates            |0.3      |[Download][pri_url]   |
 |Rodents             |#.#      |NA                    |
 
 [invert_url]: https://drive.google.com/uc?export=download&confirm=Btit&id=1Rk2eOplviyxh-QJLm4y-AC6mIf-BCT9i
