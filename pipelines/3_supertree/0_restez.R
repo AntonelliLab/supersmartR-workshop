@@ -3,7 +3,7 @@ library(restez)
 
 # Vars ----
 gb_section <- '16' # Rodents
-wd <- file.path(getwd(), 'pipelines', '2_large')
+wd <- file.path(getwd(), 'pipelines', '3_supertree')
 restez_path <- file.path(wd, 'restez_db')
 
 # Set up ----
