@@ -84,6 +84,26 @@ hello_world()
 <embed src="https://drive.google.com/viewerng/
 viewer?embedded=true&url=https://github.com/AntonelliLab/supersmartR-workshop/raw/master/assets/slides.pdf" width="750" height="800">
 
+### Data
+
+Pre-compiled `restez` databases for the "2_large" pipeline. These files will
+only be available on the day of the workshop.
+
+|GenBank section     |Size (Gb)|Link                  |
+|--------------------|---------|----------------------|
+|Invertebrates       |1.6      |[Download](invert_url)|
+|Other mammals       |0.1      |[Download](om_url)    |
+|Other vertebrates   |0.5      |[Download](ov_url)    |
+|Plants, fungi, algae|1.2      |[Download](pga_url)   |
+|Primates            |0.3      |[Download](pri_url)   |
+|Rodents             |#.#      |NA                    |
+
+[invert_url]: https://drive.google.com/uc?export=download&confirm=Btit&id=1Rk2eOplviyxh-QJLm4y-AC6mIf-BCT9i
+[om_url]: https://drive.google.com/uc?export=download&confirm=Sz0D&id=1Kpfys8695KcUuysIvsQYYtbjRT4YSP9F
+[ov_url]: https://drive.google.com/uc?export=download&confirm=JVVa&id=1jp92W6kxB114DjTkAGSxFozucgIWselt
+[pga_url]: https://drive.google.com/uc?export=download&confirm=u-7Q&id=1TyKVcz9dC2vBmCMH1U7dMj4V6KM3KlaG
+[pri_url]: https://drive.google.com/uc?export=download&confirm=AOCz&id=1Qc_84Apfewu8CJ9zhHJEJQSnZcRMoh9A
+
 * * *
 
 # Details
