@@ -12,9 +12,8 @@ if (dir.exists(wd)) {
   unlink(x = wd, recursive = TRUE, force = TRUE)
 }
 dir.create(wd)
-ncbi_dr <- '/usr/local/ncbi/blast/bin/'
 txid <- 9504  # aotus ID
 
 # Run ----
-setup(wd = wd, txid = txid, ncbi_dr = ncbi_dr, v = FALSE)
+setup(wd = wd, txid = txid, v = FALSE, outsider = TRUE)
 run(wd = wd)

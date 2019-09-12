@@ -1,5 +1,6 @@
 # Generate phylogeny
-# Use an phylogeny generatubg software to make phylogeny from the alignments contained within 3_align/
+# Use an phylogeny generatubg software to make phylogeny from the alignments
+# contained within 3_align/
 
 # Library ----
 library(outsider)

@@ -14,18 +14,16 @@ if (dir.exists(wd)) {
   unlink(x = wd, recursive = TRUE, force = TRUE)
 }
 dir.create(wd)
-ncbi_dr <- '/usr/local/ncbi/blast/bin/'
 txid <- 10015  # Heteromyidae (Kangaroo rats and others) ID
 root_txid <- 10184 # Castor genus
-# TODO: why not working with cavia?
 
 # Restez connect ----
 restez_path_set(filepath = restez_path)
 restez_connect()
 
 # Run ----
-setup(wd = wd, txid = c(txid, root_txid), ncbi_dr = ncbi_dr, v = FALSE,
-      ncps = 2)
+setup(wd = wd, txid = c(txid, root_txid), v = FALSE, ncps = 2, outsider = TRUE,
+      db_only = TRUE)
 run(wd = wd)
 
 # Restez disconnect ----
