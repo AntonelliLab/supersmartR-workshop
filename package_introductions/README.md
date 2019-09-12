@@ -15,6 +15,5 @@ Introductions should be taken in the following order:
 1. `phylotaR`
 2. `outsider`
 3. `restez`
-4. `gaius`
 
 
