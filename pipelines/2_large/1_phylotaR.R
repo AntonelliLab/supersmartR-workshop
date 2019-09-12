@@ -22,8 +22,7 @@ restez_path_set(filepath = restez_path)
 restez_connect()
 
 # Run ----
-setup(wd = wd, txid = c(txid, root_txid), v = FALSE, ncps = 2, outsider = TRUE,
-      db_only = TRUE)
+setup(wd = wd, txid = c(txid, root_txid), v = FALSE, ncps = 2, outsider = TRUE)
 run(wd = wd)
 
 # Restez disconnect ----
