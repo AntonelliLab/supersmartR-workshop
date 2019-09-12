@@ -8,7 +8,7 @@ library(restez)
 
 # Vars ----
 wd <- file.path(getwd(), 'pipelines', '3_supertree')
-restez_path <- file.path(getwd(), 'pipelines', '2_large', 'restez_db')
+restez_path <- file.path(getwd(), 'pipelines', 'restez_db')
 wd <- file.path(wd, '1_phylotaR')
 if (dir.exists(wd)) {
   unlink(x = wd, recursive = TRUE, force = TRUE)
