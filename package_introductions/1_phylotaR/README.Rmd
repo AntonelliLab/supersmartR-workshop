@@ -12,4 +12,54 @@ knitr::opts_chunk$set(
 
 # `phylotaR` Introduction
 
+The `phylotaR` package downloads all sequences associeted with a given
+taxonomic group and then runs all-vs-all BLAST to identify clusters of
+sequences suitable for phylogenetic analysis.
+
+The process takes place across four stages:
+
+* Taxise: identify taxonomic IDs
+* Download: download sequences
+* Cluster: run all-vs-all BLAST
+* Cluser^2: run all-vs-all BLAST again
+
+# Setup
+
+To run `phylotaR`, we need to set up a folder to host all downloaded files.
+Parameters for setting up the folder are provided to the `setup` function.
+
+```{r setup-phylotaR}
+library(phylotaR)
+# available parameters
+print(parameters())
+# e.g. mnsql = 200 - minimum sequence length
+# pass the parameters to the setup() function
+# essential parmeters are: wd, txid
+wd <- file.path(tempdir(), 'testing_phylotaR')
+if (dir.exists(wd)) {
+  unlink(x = wd, recursive = TRUE, force = TRUE)
+}
+dir.create(wd)
+setup(wd = wd, txid = '9504', outsider = TRUE, v = TRUE)
+# to run the pipeline
+# run(wd = wd)
+```
+
+## Parsing results
+
+Read in the phylotaR results with `read_phylota`.
+
+```{r parse-results}
+
+
+```
+
+* * *
+
+# Exercise
+
+* Read in phylotaR results
+* Reduce to clusters of MAD scores > 0.5 and > 20 taxa
+* Reduce clusters to represent just 1 sequence per species
+* Write out sequences as `.fasta` with species names
 

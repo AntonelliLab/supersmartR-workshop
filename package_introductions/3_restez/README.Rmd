@@ -106,7 +106,7 @@ For more information, visit the [`restez` website](https://ropensci.github.io/re
 
 * * *
 
-# Challenge
+# Exercise
 
 * Build a database of all phage sequences
 * Write out all "Escherichia" sequences to a fasta file
