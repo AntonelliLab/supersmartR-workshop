@@ -53,11 +53,10 @@ taxtree_generate <- function(phylota, tree_flpth) {
 
 supertree_generate <- function(mono_tree_files, backbone_file, output_file) {
   # create supertree
-  tree_files <- list.files(path = mono_tree_files, pattern = 'bestTree')
   trees <- list()
-  for (i in seq_along(tree_files)) {
-    id <- sub(pattern = '^.*\\.', replacement = '', x = tree_files[[i]])
-    tree <- treeman::readTree(file = tree_files[[i]])
+  for (i in seq_along(mono_tree_files)) {
+    id <- sub(pattern = '^.*\\.', replacement = '', x = mono_tree_files[[i]])
+    tree <- treeman::readTree(file = mono_tree_files[[i]])
     nids <- tree@nds
     new_nids <- paste0(id, '_', nids)
     trees[[id]] <- treeman::setNdsID(tree = tree, ids = nids, vals = new_nids)

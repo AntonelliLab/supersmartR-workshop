@@ -16,4 +16,6 @@ tree$edge.length <- NULL
 outgroup_tips <- tree$tip.label[grepl(pattern = outgroup_pattern,
                                       x = tree$tip.label, ignore.case = TRUE)]
 tree <- root(unroot(tree), outgroup = outgroup_tips)
-plot(x = tree, no.margin = TRUE)
+pdf(file = 'supertree.pdf', width = 7, height = 28)
+plot(x = tree, no.margin = TRUE, cex = 0.75)
+dev.off()
