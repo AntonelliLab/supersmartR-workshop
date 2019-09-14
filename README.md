@@ -32,7 +32,7 @@ and scaling up the method.
 
 * Computer
     * Operating system: Windows 10, Linux, OSX
-    * 50 - 100 GB spare capacity
+    * 20 - 50 GB spare capacity
 * Software
     * [R](https://cran.r-project.org/) (> 3.5)
     * [RStudio](https://www.rstudio.com/)
@@ -52,14 +52,14 @@ Install dependant packages.
 # install.packages(“remotes”)
 
 library(remotes)
+# install latest outsider
+install_github("antonellilab/outsider.base")
+install_github("antonellilab/outsider")
 # install latest phylotaR
 install_github("ropensci/phylotaR")
 # install latest restez
 install_github("hannesmuehleisen/MonetDBLite-R")
 install_github("ropensci/restez")
-# install latest outsider
-install_github("antonellilab/outsider.base")
-install_github("antonellilab/outsider")
 # install latest gaius
 install_github("antonellilab/gaius")
 ```
