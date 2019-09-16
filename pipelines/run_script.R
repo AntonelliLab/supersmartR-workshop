@@ -1,6 +1,6 @@
 # Var ----
 # choose the pipeline to run
-pipeline_dir <- file.path(getwd(), 'pipelines', '2_large')
+pipeline_dir <- file.path(getwd(), 'pipelines', '0_base')
 # hide any output printing to screen for outsider
 outsider::verbosity_set(show_program = FALSE, show_docker = FALSE)
 

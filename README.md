@@ -86,8 +86,8 @@ viewer?embedded=true&url=https://github.com/AntonelliLab/supersmartR-workshop/ra
 
 ### Data
 
-Pre-compiled `restez` databases for the "2_large" pipeline. These files will
-only be available on the day of the workshop.
+Pre-compiled `restez` databases for the "2_large" and "3_supertree" pipelines.
+(These files will only be available on the day of the workshop.)
 
 |GenBank section     |Size (Gb)|Link                  |
 |--------------------|---------|----------------------|
@@ -104,6 +104,12 @@ only be available on the day of the workshop.
 [pga_url]: https://drive.google.com/uc?export=download&confirm=u-7Q&id=1TyKVcz9dC2vBmCMH1U7dMj4V6KM3KlaG
 [pri_url]: https://drive.google.com/uc?export=download&confirm=AOCz&id=1Qc_84Apfewu8CJ9zhHJEJQSnZcRMoh9A
 [rod_url]: https://drive.google.com/uc?export=download&confirm=bCFU&id=1TqfZWwwi8R7TyAX9IjrYZHkYGFWrz5-z
+
+Completed first step of "3_supertree" pipeline for [**Hystricomorpha**](https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=10015).
+
+[Download][https://drive.google.com/open?id=1kUCKsLflUistf7ZnBKCsWZeh269u5ec1]
+
+All files are ZIP compressed folders.
 
 * * *
 

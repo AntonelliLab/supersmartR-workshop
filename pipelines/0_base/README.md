@@ -1,8 +1,8 @@
-# Simple phylogenetic pipeline
+# Base phylogenetic pipeline
 
 This pipeline consists of a series of R scipts for constructing a phylogenetic
 tree for a single gene/cluster. The order in which the scripts are run is
-indicated by the preffixed number.
+indicated by the prefixed number.
 
 ## Steps
 
