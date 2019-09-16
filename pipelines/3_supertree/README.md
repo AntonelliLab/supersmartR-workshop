@@ -23,7 +23,7 @@ database (`db_only = TRUE`).
 * Break the analysis up into species-level and backbone phylogenetic trees
 * Combine the resulting trees into a supertree
 
-#### Choosing a taxonomic ID
+## Choosing a taxonomic ID
 
 *Select a large clade (< 500 spp).*
 

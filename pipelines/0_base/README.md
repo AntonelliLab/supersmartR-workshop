@@ -19,7 +19,7 @@ indicated by the prefixed number.
 
 (`../run_script.R` launches all the scripts in order.)
 
-#### Choosing a taxonomic ID
+## Choosing a taxonomic ID
 
 Taxonomic IDs are based on those from NCBI. To select a taxonomic ID, you will
 need to look up the 

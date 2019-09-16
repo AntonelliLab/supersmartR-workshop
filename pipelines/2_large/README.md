@@ -23,7 +23,7 @@ with your cluster-selection and supermatrix-construction parameters
 * Use `restez` database to speed-up the download process.
 * Specify a root taxon
 
-#### Choosing a taxonomic ID
+## Choosing a taxonomic ID
 
 Taxonomic IDs are based on those from NCBI. To select a taxonomic ID, you will
 need to look up the 
