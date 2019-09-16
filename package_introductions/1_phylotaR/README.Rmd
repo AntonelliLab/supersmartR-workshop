@@ -28,7 +28,8 @@ The process takes place across four stages:
 To run `phylotaR`, we need to set up a folder to host all downloaded files.
 Parameters for setting up the folder are provided to the `setup` function.
 
-```{r setup-phylotaR}
+```{r setup-phylotaR, include=TRUE, eval=FALSE}
+# NOT RUN
 library(phylotaR)
 # available parameters
 print(parameters())
@@ -45,20 +46,119 @@ setup(wd = wd, txid = '9504', outsider = TRUE, v = TRUE)
 # run(wd = wd)
 ```
 
+
 ## Parsing results
 
-Read in the phylotaR results with `read_phylota`.
+Read in the phylotaR results with `read_phylota`. But here we will use the
+pacakge example data, "Aotus".
 
-```{r parse-results}
+### Summarise the clusters
 
+```{r summary-results, echo=TRUE}
+library(phylotaR)
+data(aotus)
+# generate summary stats for each cluster
+smmry_tbl <- summary(aotus)
+# Important details
+#  N_taxa     - number of taxonomic entities associated with sequences in cluster
+#  N_seqs     - number of sequences in cluster
+#  Med_sql    - median sequence length of sequences in cluster
+#  MAD        - measure of the deviation in sequence length of a cluster
+#  Definition - must common words in sequence definition lines
+smmry_tbl[1:10, ]
+# plot
+p <- plot_phylota_treemap(phylota = aotus, cids = aotus@cids[1:10],
+                          area = 'nsq', fill = 'ntx')
+print(p)
+```
 
+### Understand the PhyLoTa table (`aotus`)
+
+```{r phylota-table}
+# PhyLoTa table has ...
+# clusters
+aotus@clstrs
+# sequences
+aotus@sqs
+# taxonomy
+aotus@txdct
+
+# A cluster is a list of sequences
+aotus@clstrs@clstrs[[1]]
+str(aotus@clstrs@clstrs[[1]])
+# A sequence is a series of letters and associated metadata
+aotus@sqs@sqs[[1]]
+str(aotus@sqs@sqs[[1]])
+# A taxonomic record is an ID and associated metadata
+txid <- aotus@txids[[1]]
+
+# Information can be extracted from ...
+# clusters
+get_clstr_slot(phylota = aotus, cid = aotus@cids[1:10], slt_nm = 'nsqs')
+# sequences
+get_sq_slot(phylota = aotus, sid = aotus@sids[1:10], slt_nm = 'nncltds')
+# tax. records
+get_tx_slot(phylota = aotus, txid = aotus@txids[1:10], slt_nm = 'scnm')
+
+# Other useful convenience functions
+get_nsqs(phylota = aotus, cid = aotus@cids[1:10])
+get_ntaxa(phylota = aotus, cid = aotus@cids[1:10], rnk = 'species')
+```
+
+### Select clusters
+
+```{r selection}
+# use the summary table to extract cids of interest
+nrow(smmry_tbl)
+# keep clusters with MAD above 0.5
+smmry_tbl <- smmry_tbl[smmry_tbl[['MAD']] >= 0.5, ]
+nrow(smmry_tbl)
+# keep clusters with more than 10 seqs
+smmry_tbl <- smmry_tbl[smmry_tbl[['N_seqs']] >= 10, ]
+nrow(smmry_tbl)
+# keep clusters with more than 4 species
+nspp <- get_ntaxa(phylota = aotus, cid = smmry_tbl[['ID']], rnk = 'species')
+selected_cids <- smmry_tbl[['ID']][nspp >= 4]
+length(selected_cids)
+
+# create selected PhyLoTa table
+selected_clusters <- drop_clstrs(phylota = aotus, cid = selected_cids)
+```
+
+### Plotting selected clusters
+
+```{r plotting}
+# extract scientific names for taxonomic IDs
+scnms <- get_tx_slot(phylota = selected_clusters, txid = selected_clusters@txids,
+                     slt_nm = 'scnm')
+# plot presence/absence
+plot_phylota_pa(phylota = selected_clusters, cids = selected_clusters@cids,
+                txids = selected_clusters@txids, txnms = scnms)
+```
+
+### Writing to file
+
+```{r writeout}
+# reduce clusters to repr. of 1 seq. per sp.
+reduced_clusters <- drop_by_rank(phylota = selected_clusters, rnk = 'species',
+                                 n = 1)
+reduced_clusters
+# write out first cluster
+sids <- reduced_clusters@clstrs[['0']]@sids
+txids <- get_txids(phylota = reduced_clusters, sid = sids, rnk = 'species')
+scnms <- get_tx_slot(phylota = reduced_clusters, txid = txids, slt_nm = 'scnm')
+outfile <- file.path(tempdir(), 'cluster_1.fasta')
+write_sqs(phylota = reduced_clusters, sid = sids, sq_nm = scnms,
+          outfile = outfile)
+cat(readLines(outfile), sep = '\n')
 ```
 
 * * *
 
 # Exercise
 
-* Read in phylotaR results
+* Download rodent `phylotaR` results found [here](https://drive.google.com/uc?export=download&id=1kUCKsLflUistf7ZnBKCsWZeh269u5ec1).
+* Read in the `phylotaR` results
 * Reduce to clusters of MAD scores > 0.5 and > 20 taxa
 * Reduce clusters to represent just 1 sequence per species
 * Write out sequences as `.fasta` with species names
