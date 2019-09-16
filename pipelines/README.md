@@ -9,5 +9,3 @@ Subsequent pipelines (`1_`, `2_`, ...) build on this base for more complex phylo
 timestamps. For a pipeline to run successfully with this script each stage
 script must run independently and have a `#_name.R` naming convention, where `#`
 indicates the order in which the script will be called.
-
-The default settings construct trees for Rodentia.

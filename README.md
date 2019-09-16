@@ -79,10 +79,12 @@ hello_world()
 
 # Slides
 
-> Note: work in progress.
+![](/assets/slides_glimpse.gif)
 
-<embed src="https://drive.google.com/viewerng/
-viewer?embedded=true&url=https://github.com/AntonelliLab/supersmartR-workshop/raw/master/assets/slides.pdf" width="750" height="800">
+Available via `assets/slides.pdf`.
+
+[Download](https://github.com/AntonelliLab/supersmartR-workshop/raw/master/assets/slides.pdf) | [View online](https://drive.google.com/viewerng/
+viewer?&url=https://github.com/AntonelliLab/supersmartR-workshop/raw/master/assets/slides.pdf)
 
 ### Data
 
