@@ -107,7 +107,7 @@ Pre-compiled `restez` databases for the "2_large" and "3_supertree" pipelines.
 
 *Also ...*
 
-Completed first step of "3_supertree" pipeline for [**Hystricomorpha**](https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=10015): [Download](https://drive.google.com/open?id=1kUCKsLflUistf7ZnBKCsWZeh269u5ec1])
+Completed first step of "3_supertree" pipeline for [**Hystricomorpha**](https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=10015): [Download](https://drive.google.com/uc?export=download&confirm=bCFU&id=1kUCKsLflUistf7ZnBKCsWZeh269u5ec1])
 
 **Note: All files are ZIP compressed folders.**
 
