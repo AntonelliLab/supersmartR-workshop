@@ -81,10 +81,8 @@ hello_world()
 
 ![](/assets/slides_glimpse.gif)
 
-Available via `assets/slides.pdf`.
-
-[Download](https://github.com/AntonelliLab/supersmartR-workshop/raw/master/assets/slides.pdf) | [View online](https://drive.google.com/viewerng/
-viewer?&url=https://github.com/AntonelliLab/supersmartR-workshop/raw/master/assets/slides.pdf)
+Available online via [`assets/slides.pdf`](blob/master/assets/slides.pdf) or
+[Download](/raw/master/assets/slides.pdf)
 
 ### Data
 
