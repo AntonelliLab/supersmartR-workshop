@@ -15,22 +15,24 @@ if (!dir.exists(output_dir)) {
 # Read in ----
 clusters <- read_phylota(input_dir)
 
-# Extract cytb ----
+# Extract best cluster ----
 # Generate summary of identified clusters
 smmry <- summary(clusters)
-# Extract cluster with 'cytb' in feature name
-cytb <- smmry$ID[which(grepl('cytb', smmry$Feature))[1]]
-cytb <- drop_clstrs(clusters, cytb)
+smmry <- smmry[smmry$MAD > 0.8, ]
+smmry <- smmry[smmry$N_taxa > 3, ]
+choice <- smmry[['ID']][[1]]
+# Extract cluster
+selected <- drop_clstrs(clusters, choice)
 # Reduce cluster to just one sequence per taxon
-cytb <- drop_by_rank(cytb, n = 1)
+selected <- drop_by_rank(selected, n = 1)
 # Get taxonomic IDs for taxa in cluster
-txids <- get_txids(cytb, cid = cytb@cids[[1]])
+txids <- get_txids(selected, cid = selected@cids[[1]])
 # Convert IDs to species names
-sp_nms <- get_tx_slot(cytb, txids, slt_nm = 'scnm')
+sp_nms <- get_tx_slot(selected, txids, slt_nm = 'scnm')
 sp_nms <- sub(' ', '_', sp_nms)
 # Write out
-output_file <- file.path(output_dir, 'aotus_cytb.fasta')
-write_sqs(cytb, output_file, sq_nm = sp_nms, sid = names(sp_nms))
+output_file <- file.path(output_dir, 'selected.fasta')
+write_sqs(selected, output_file, sq_nm = sp_nms, sid = names(sp_nms))
 
 # View output file ----
 # What do the first 50 lines of the file look like?

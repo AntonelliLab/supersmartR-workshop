@@ -6,7 +6,7 @@ library(ape)
 
 # Vars ----
 wd <- file.path(getwd(), 'pipelines', '0_base')
-input_file <- file.path(wd, '4_phylogeny', 'RAxML_bestTree.aotus_cytb')
+input_file <- file.path(wd, '4_phylogeny', 'RAxML_bestTree.selected_cluster')
 
 # Read in ----
 tree <- read.tree(file = input_file)

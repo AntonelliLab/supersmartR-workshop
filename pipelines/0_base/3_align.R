@@ -6,7 +6,6 @@ library(outsider)
 
 # Vars ----
 repo <- 'dombennett/om..mafft'
-clade_gene <- 'aotus_cytb'
 wd <- file.path(getwd(), 'pipelines', '0_base')
 input_dir <- file.path(wd, '2_clusters')
 output_dir <- file.path(wd, '3_align')
@@ -22,6 +21,6 @@ mafft <- module_import(fname = 'mafft', repo = repo)
 
 # Align ----
 # mafft(arglist = '--help')
-input_file <- file.path(input_dir, paste0(clade_gene, '.fasta'))
-output_file <- file.path(output_dir, paste0(clade_gene, '_alignment.fasta'))
+input_file <- file.path(input_dir, 'selected.fasta')
+output_file <- file.path(output_dir, 'alignment.fasta')
 mafft(arglist = c('--auto', input_file, '>', output_file))
