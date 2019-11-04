@@ -1,5 +1,8 @@
 # supersmartR Workshop <img src="https://raw.githubusercontent.com/AntonelliLab/supersmartR/master/logo.png" height="300" align="right"/>
-> 17 Sept. 2019, Gothenburg Global Biodiversity Centre, Gothenburg, Sweden.
+
+> These resources were originally put together for a one-day workshop for the Gothenburg Global Biodiversity Centre, Gothenburg, Sweden on the 17th Sept. 2019.
+
+> To learn the `supersmartR` approach yourself, you can follow the instructions layed out in the [slides](https://github.com/AntonelliLab/supersmartR-workshop/blob/master/assets/slides.pdf).
 
 [`supersmartR`](https://github.com/AntonelliLab/supersmartR) is a series of
 R packages that form a phylogenetic pipeline.
@@ -55,11 +58,11 @@ library(remotes)
 # install latest outsider
 install_github("antonellilab/outsider.base")
 install_github("antonellilab/outsider")
-# install latest phylotaR
-install_github("ropensci/phylotaR")
 # install latest restez
 install_github("hannesmuehleisen/MonetDBLite-R")
 install_github("ropensci/restez")
+# install latest phylotaR
+install_github("ropensci/phylotaR")
 # install latest gaius
 install_github("antonellilab/gaius")
 ```
